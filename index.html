@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Thawan Silva">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de entrada</title>
+</head>
+<body>
+    <div class="box-info">
+        <h1>Registro de entrada</h1>
+        <div id="box">
+            <div id="box-input">
+                <div class="box-item" id="box1">
+                    <p>Valor da entrada: 10 reais</p>
+                </div>
+                <div class="box-item" id="box1">
+                    <p>Caixa inicial</p>
+                    <input type="number" name="box-money" id="box-money" min="0" placeholder="Digite o dinheiro do caixa">
+                </div>
+                <div>
+                    <p>Forma de pagamento</p>
+                    <select name="payment" id="pagamento" onchange="atualizar()">
+                        <option value="-1"> Selecione a forma de pagamento</option>
+                        <option value="0" class="opt" id="opt1">Dinheiro</option>
+                        <option value="1" class="opt" id="opt2">PIX</option>
+                        <option value="2" class="opt" id="opt3">Cartão de crédito</option>
+                        <option value="3" class="opt" id="opt4">Cartão de débito</option>
+                    </select>
+                </div>
+                <div class="box-item" id="box1">
+                    <p>Número de Adultos <br> <small>*obs: inclui maiores de 5 anos.</small></p>
+                    <input type="number" name="adulto" id="adulto" min="0" placeholder="Digite o número de adultos">
+                </div>
+                <div>
+                    <button id="adicionar" onclick="adicionar()">Adicionar</button>
+                    <button id="resultado" onclick="resultado()">Resultado Final</button>
+                </div>
+            </div>
+            <div id="line"></div>
+            <div id="res">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Resultado Final</th>
+                        </tr>
+                    </thead> <!-- Fazer a tabela-->
+                    <tbody>
+                        <tr>
+                           <td colspan="2">Dinheiro</td>
+                           <td id="dinheiro"></td> 
+                        </tr>
+                        <tr>
+                           <td colspan="2">PIX</td>
+                           <td id="pix"></td> 
+                        </tr>
+                        <tr>
+                           <td colspan="2">C. de Crédito</td>
+                           <td id="credito"></td> 
+                        </tr>
+                        <tr>
+                           <td colspan="2">C. de Débito</td>
+                           <td id="debito"></td> 
+                        </tr>
+                        <tr>
+                           <td colspan="2">Caixa inicial</td>
+                           <td id="cx_ini"></td> 
+                        </tr>
+                        <tr>
+                           <td id="box_total" colspan="2">Total</td>
+                           <td class="" id="caixa_final"></td> 
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="txt_res"></p>
+            </div>
+        </div>
+    </div>
+    <h2>Made by: <a href="https://www.linkedin.com/in/thawan-silva-a07b85229/">Thawan Silva</a></h2>
+    <script src="script.js"></script>
+</body>
+</html>
